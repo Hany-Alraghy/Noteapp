@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Api\NoteController;
+use App\Http\Controllers\ProfileController;
 
 //
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
@@ -22,12 +23,10 @@ Route::middleware('auth:sanctum')->group(function () {
 
     //
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::post('/notes', [NoteController::class, 'store']); // إضافة ملاحظة
-    Route::get('/notes', [NoteController::class, 'index']); // جلب كل الملاحظات
-    Route::get('/notes/{id}', [NoteController::class, 'show']); // جلب ملاحظة واحدة
-    Route::put('/notes/{id}', [NoteController::class, 'update']); // تعديل ملاحظة
-    Route::delete('/notes/{id}', [NoteController::class, 'destroy']); // حذف ملاحظة
-});
+    Route::post('/notes', [NoteController::class, 'store']); 
+    Route::get('/notes', [NoteController::class, 'index']); 
+    Route::get('/notes/{id}', [NoteController::class, 'show']); 
+    Route::put('/notes/{id}', [NoteController::class, 'update']); 
+    Route::delete('/notes/{id}', [NoteController::class, 'destroy']); 
 
 });
