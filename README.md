@@ -48,3 +48,10 @@ php artisan migrate
 
 php artisan serve
 ```
+
+## Postman Collection
+
+You can download the Postman collection for testing the APIs from the following link:
+
+[Download Postman Collection](NoteApp2.postman_collection)
+
